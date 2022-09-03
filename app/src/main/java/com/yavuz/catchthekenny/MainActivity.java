@@ -8,21 +8,31 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+
 
     Handler mHandler = new Handler();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_main);
+
     }
 
     public void play(View view){
 
-        mHandler.postDelayed(mLaunchTask,700);
+        mHandler.postDelayed(mLaunchTask,650);
     }
 
     public void stop(View view){
@@ -34,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
     public void how(View view){
 
         Intent intent = new Intent(getApplicationContext(), how2PlayActivity.class);
-        finish();
         startActivity(intent);
     }
 
@@ -53,8 +62,9 @@ public class MainActivity extends AppCompatActivity {
     private Runnable mLaunchTask = new Runnable() {
         public void run() {
             Intent i = new Intent(getApplicationContext(),gameActivity.class);
-            finish();
             startActivity(i);
+            finish();
+            overridePendingTransition(0, 0);
         }
     };
 }

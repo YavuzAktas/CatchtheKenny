@@ -1,5 +1,6 @@
 package com.yavuz.catchthekenny;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,7 +14,9 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.provider.MediaStore;
+import android.text.Html;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -88,7 +91,7 @@ public class gameActivity extends AppCompatActivity {
 
                 button.setEnabled(true);
                 button2.setEnabled(true);
-                timeText.setText("Time Over");
+                timeText.setText("Time's Up!");
                 handler.removeCallbacks(runnable);
                 for(ImageView image : imageArray){
                     image.setVisibility(View.INVISIBLE);
@@ -137,7 +140,7 @@ public class gameActivity extends AppCompatActivity {
                 Random random = new Random();
                 int i = random.nextInt(9);
                 imageArray[i].setVisibility(View.VISIBLE);
-                handler.postDelayed(this,800);
+                handler.postDelayed(this,600);
             }
         };
         handler.post(runnable);
@@ -149,6 +152,7 @@ public class gameActivity extends AppCompatActivity {
         intent.putExtra("userScore", lastScore);
         startActivity(intent);
         finish();
+        overridePendingTransition(0, 0);
     }
 
     public void restart(View view){
@@ -163,17 +167,10 @@ public class gameActivity extends AppCompatActivity {
             @Override
             public void onFinish() {
 
-                if (Build.VERSION.SDK_INT >= 11) {
-                    recreate();
-                } else {
-                    Intent intent = getIntent();
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                    finish();
-                    overridePendingTransition(0, 0);
-
-                    startActivity(intent);
-                    overridePendingTransition(0, 0);
-                }
+                finish();
+                overridePendingTransition(0, 0);
+                startActivity(getIntent());
+                overridePendingTransition(0, 0);
             }
 
         }.start();

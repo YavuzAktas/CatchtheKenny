@@ -61,48 +61,50 @@
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="339dp"
-        android:layout_height="91dp"
+        android:layout_width="349dp"
+        android:layout_height="90dp"
 
         android:layout_gravity="center_horizontal"
+        android:fontFamily="sans-serif-black"
         android:padding="12dip"
         android:text="It is a 10 second game to catch by touching the Kenny.
 "
+        android:textAlignment="center"
         android:textColor="#3d33a8"
-        android:textSize="22dp"
+        android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/splash_imageview"
-        app:layout_constraintVertical_bias="0.206" />
+        app:layout_constraintVertical_bias="0.155" />
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="338dp"
-        android:layout_height="101dp"
+        android:layout_width="343dp"
+        android:layout_height="88dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="176dp"
+        android:layout_marginTop="180dp"
+        android:fontFamily="sans-serif-black"
         android:padding="12dip"
         android:text="If you catch kenny, you will get points"
+        android:textAlignment="center"
         android:textColor="#3d33a8"
-        android:textSize="22dp"
+        android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/splash_imageview" />
 
     <ImageView
         android:id="@+id/imageView13"
-        android:layout_width="151dp"
-        android:layout_height="185dp"
+        android:layout_width="157dp"
+        android:layout_height="193dp"
         app:layout_constraintBottom_toBottomOf="@+id/splash_imageview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:layout_constraintVertical_bias="0.336"
+        app:layout_constraintVertical_bias="0.708"
         app:srcCompat="@drawable/kenny" />
 
     <TextView
@@ -111,7 +113,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="28dp"
+        android:fontFamily="sans-serif-black"
         android:text="Good luck ;)"
+        android:textAlignment="center"
         android:textColor="#3d33a8"
         android:textSize="22dp"
         android:textStyle="bold"

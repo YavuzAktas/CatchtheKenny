@@ -8,22 +8,22 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button8"
-        android:onClick="github"
         android:layout_width="45dp"
         android:layout_height="45dp"
         android:layout_marginRight="145dp"
         android:background="@drawable/social_media_button"
+        android:onClick="github"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button3" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button7"
-        android:onClick="linkedin"
         android:layout_width="45dp"
         android:layout_height="45dp"
         android:layout_marginLeft="145dp"
         android:background="@drawable/linkedin_logo"
+        android:onClick="linkedin"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button3" />
@@ -55,9 +55,10 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/bungee"
         android:text="Catch the Kenny"
         android:textColor="#3d33a8"
-        android:textSize="45sp"
+        android:textSize="35sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
